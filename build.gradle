@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.1.RELEASE")
+        classpath 'org.springframework.boot:spring-boot-gradle-plugin:2.0.1.RELEASE'
         classpath 'org.owasp:dependency-check-gradle:3.1.2'
     }
 }
@@ -27,6 +27,9 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
-    testCompile("junit:junit")
+    // this dependency contains a couple of known vulnerabilities
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.7.3'
+
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    testCompile 'junit:junit'
 }
