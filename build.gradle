@@ -44,8 +44,13 @@ dependencyCheck {
     // but humans may also need an HTML one
     format = 'ALL'
 
-    // set up a quality gate for major vulnerabilities:
-    //   let's consider a vulnerability as a major one if its CVSS score is higher than 7
-    //   the build is going to fail if major CVEs found
+    // set up a quality gate for vulnerabilities with high severity level:
+    //   let's consider that a vulnerability has a high severity level if its CVSS score is higher than 7
+    //   the build is going to fail if vulnerabilities with high severity level found
     failBuildOnCVSS = 7
+
+    // specify a list of known issues which contain:
+    //   false-positives
+    //   confirmed vulnerabilities which are not fixed yet, but we have a ticket for that
+    suppressionFile = 'dependency-check-known-issues.xml'
 }

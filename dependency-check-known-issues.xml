@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.1.xsd">
+    <suppress>
+        <notes><![CDATA[
+            See https://github.com/artem-smotrakov/spring-boot-fun/issues/1
+                file name: jackson-databind-2.7.3.jar
+        ]]>
+        </notes>
+        <gav regex="true">^com\.fasterxml\.jackson\.core:jackson-databind:.*$</gav>
+        <cve>CVE-2017-15095</cve>
+    </suppress>
+    <suppress>
+        <notes><![CDATA[
+            See https://github.com/artem-smotrakov/spring-boot-fun/issues/1
+                file name: jackson-databind-2.7.3.jar
+        ]]>
+        </notes>
+        <gav regex="true">^com\.fasterxml\.jackson\.core:jackson-databind:.*$</gav>
+        <cve>CVE-2017-17485</cve>
+    </suppress>
+    <suppress>
+        <notes><![CDATA[
+            See https://github.com/artem-smotrakov/spring-boot-fun/issues/1
+                file name: jackson-databind-2.7.3.jar
+        ]]>
+        </notes>
+        <gav regex="true">^com\.fasterxml\.jackson\.core:jackson-databind:.*$</gav>
+        <cve>CVE-2017-7525</cve>
+    </suppress>
+    <suppress>
+        <notes><![CDATA[
+            See https://github.com/artem-smotrakov/spring-boot-fun/issues/1
+                file name: jackson-databind-2.7.3.jar
+        ]]>
+        </notes>
+        <gav regex="true">^com\.fasterxml\.jackson\.core:jackson-databind:.*$</gav>
+        <cve>CVE-2018-7489</cve>
+    </suppress>
+</suppressions>
