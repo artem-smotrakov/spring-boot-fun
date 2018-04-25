@@ -16,7 +16,7 @@ pipeline {
 
     post {
         always {
-            dependencyCheckPublisher()
+            dependencyCheckPublisher pattern: 'build/reports/dependency-check-report.xml'
         }
     }
 }
