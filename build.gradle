@@ -33,3 +33,19 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
     testCompile 'junit:junit'
 }
+
+// OWASP Dependency Check settings
+dependencyCheck {
+
+    // let's ignore errors to make builds in Jenkins more stable
+    failOnError = false
+
+    // OWASP Dependency Check plugin for Jenkins needs an XML report,
+    // but humans may also need an HTML one
+    format = 'ALL'
+
+    // set up a quality gate for major vulnerabilities:
+    //   let's consider a vulnerability as a major one if its CVSS score is higher than 7
+    //   the build is going to fail if major CVEs found
+    failBuildOnCVSS = 7
+}
