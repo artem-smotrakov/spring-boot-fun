@@ -7,5 +7,16 @@ pipeline {
                 sh './gradlew build'
             }
         }
+        stage('OWASP Dependency Check') {
+            steps {
+                sh './gradlew dependencyCheckAnalyze'
+            }
+        }
+    }
+
+    post {
+        always {
+            dependencyCheckPublisher()
+        }
     }
 }
